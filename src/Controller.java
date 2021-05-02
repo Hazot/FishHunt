@@ -43,10 +43,19 @@ public class Controller {
     /**
      * Retourne le score final au moment du game over
      *
-     * @return Retourne un int de score final
+     * @return int de score final
      */
     public int getFinalScore() {
         return game.getFinalScore();
+    }
+
+    /**
+     * Retourne la précision finale au moment du game over
+     *
+     * @return Double de la précision finale
+     */
+    public double getFinalAccuracy() {
+        return game.getFinalAccuracy();
     }
 
 
@@ -57,8 +66,8 @@ public class Controller {
      * @param finalScore Score final sauvegardé au moment où le game over apparait
      * @return L'index calculé par la méthode dans le modèle
      */
-    public int newHighScore(ArrayList<String> scores, int finalScore) {
-        return game.newHighScore(scores, finalScore);
+    public int newHighScore(ArrayList<String> scores, int finalScore, double finalAccuracy) {
+        return game.newHighScore(scores, finalScore, finalAccuracy);
     }
 
     /**
@@ -67,10 +76,11 @@ public class Controller {
      * @param scores ArrayList des HighScores jusqu'à date
      * @param index index calculé avec la méthode newHighScore
      * @param writtenName Nom choisi par l'utilisateur avant d'appuyer sur le bouton ajouter
-     * @param finalScore Score final sauvegardé au moment où le game over apparait
+     * @param score Score final sauvegardé au moment où le game over apparait
+     * @param accuracy Précision finale sauvegardé au moment où le game over apparait
      */
-    public void addHighScore(ArrayList<String> scores, int index, String writtenName, int finalScore) {
-        game.addHighScore(scores, index, writtenName, finalScore);
+    public void addHighScore(ArrayList<String> scores, int index, String writtenName, int score, double accuracy) {
+        game.addHighScore(scores, index, writtenName, score, accuracy);
     }
 
     /**
@@ -80,7 +90,6 @@ public class Controller {
     public ArrayList<String> getHighScores() {
         return game.getHighScores();
     }
-
 
     // Controls
     public void shoot(double mouseX, double mouseY) {
