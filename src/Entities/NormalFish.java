@@ -13,7 +13,7 @@ public class NormalFish extends Fishes{
         super(level);
 
         // Détermination de l'image du poisson aléatoirement
-        String fishKind = "/Images/fish/" + (int) (Math.random() * 5) + ".png";
+        String fishKind = "/Images/fish/0" + (int) (Math.random() * 8) + ".png";
         entityImage = new Image(fishKind, largeur, hauteur, false, false);
         //entityImage = ImageHelpers.colorize(entityImage, Color.rgb((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256), 1));
 

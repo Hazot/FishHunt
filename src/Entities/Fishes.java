@@ -15,12 +15,12 @@ public abstract class Fishes extends Entities{
     public Fishes(int level) {
 
         // Grosseur initial d'un poisson
-        this.largeur = (int) (Math.random() * 41) + 120;
+        this.largeur = (int) (Math.random() * 41) + 80;
         this.hauteur = largeur;
 
-         // Détermine la vitesse de base d'un poisson
-    v = 100*Math.pow(level, (double)1/3) + 200;
-}
+        // Détermine la vitesse de base d'un poisson
+        v = 100*Math.pow(level, (double)1/3) + 200;
+    }
 
     /**
      * Dessine l'affichage de n'importe quel poisson sur le canevas

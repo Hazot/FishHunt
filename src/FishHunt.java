@@ -6,7 +6,6 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -68,7 +67,7 @@ public class FishHunt extends Application {
         primaryStage.setScene(createSceneMenu());
 
         // Paramètres de la fenêtre de l'application
-        primaryStage.setTitle("LOCC Hunt");
+        primaryStage.setTitle("Fish Hunt");
         primaryStage.getIcons().add(new Image("/Images/logo.png"));
         primaryStage.setResizable(false);
         primaryStage.sizeToScene();
@@ -348,7 +347,6 @@ public class FishHunt extends Application {
 
         };
         timer.start();
-        sceneJeu.setCursor(Cursor.NONE);
 
         return sceneJeu;
     }
