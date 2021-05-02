@@ -58,7 +58,6 @@ public class Controller {
         return game.getFinalAccuracy();
     }
 
-
     /**
      * Méthode qui fait le lien entre la vue et le modèle sur la détermination d'un nouveau score
      *
