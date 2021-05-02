@@ -18,8 +18,8 @@ public abstract class Fishes extends Entities{
         this.largeur = (int) (Math.random() * 41) + 120;
         this.hauteur = largeur;
 
-         // Détermine la vitesse de base d'un poisson
-    v = 100*Math.pow(level, (double)1/3) + 200;
+        // Détermine la vitesse de base d'un poisson
+        v = 100*Math.pow(level, (double)1/3) + 200;
 }
 
     /**
