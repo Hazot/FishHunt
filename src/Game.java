@@ -74,10 +74,10 @@ public class Game {
         bubbles = new LinkedList<>();
 
         // Chargement des images du HUD
-        crosshair = new Image("/Images/cible.png", 50, 50, false, false);
-        life1 = new Image("/Images/fish/00.png", 40, 40, false, false);
-        life2 = new Image("/Images/fish/00.png", 40, 40, false, false);
-        life3 = new Image("/Images/fish/00.png", 40, 40, false, false);
+        crosshair = new Image("/Images/cible.png", 70, 70, false, false);
+        life1 = new Image("/Images/fish/0.png", 60, 60, false, false);
+        life2 = new Image("/Images/fish/0.png", 60, 60, false, false);
+        life3 = new Image("/Images/fish/0.png", 60, 60, false, false);
 
     }
 
@@ -96,6 +96,7 @@ public class Game {
             }
         }
     }
+
 
     /**
      * Méthode qui ajoute un seul poisson spécial à chaque appel dans le tableau de poissons générés
@@ -135,20 +136,20 @@ public class Game {
      */
     public void generateFishes() {
         if (!spawnDisabled) {
-            if ((int) timeAlive % 3 == 0 && !activeNormalFish) {
+            if ((int) timeAlive % 2 == 0 && !activeNormalFish) {
                 activeNormalFish = true;
                 NormalFish normalFish = new NormalFish(level);
                 fishes.add(normalFish);
             }
-            if ((int) timeAlive % 3 == 1) {
+            if ((int) timeAlive % 2 == 1) {
                 activeNormalFish = false;
             }
-            if (level > 1) {
-                if ((int) timeAlive % 5 == 0 && !activeSpecialFish) {
+            if (level > 0) {
+                if ((int) timeAlive % 4 == 0 && !activeSpecialFish) {
                     activeSpecialFish = true;
                     addSpecialFish();
                 }
-                if ((int) timeAlive % 5 == 1) {
+                if ((int) timeAlive % 4 == 1) {
                     activeSpecialFish = false;
                 }
             }
@@ -313,7 +314,7 @@ public class Game {
         context.fillText(String.valueOf(score), Math.round(WIDTH)/2, 40);
         context.setFont(Font.font("Verdana", 25));
         updateAccuracy();
-        context.fillText("Précision: " + accuracy + " %", Math.round(WIDTH)/2, 460);
+        context.fillText("Blyat: " + accuracy + " %", Math.round(WIDTH)/2, 460);
 
         // Affiche Level up + le level de départ
         showLevelUp(context);
@@ -347,7 +348,7 @@ public class Game {
         }
 
         // Dessine le crosshair
-        context.drawImage(crosshair, mouseX - 25, mouseY - 25);
+        context.drawImage(crosshair, mouseX - 35, mouseY - 35);
     }
 
     /**
