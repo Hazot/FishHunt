@@ -114,7 +114,7 @@ public class FishHunt extends Application {
             primaryStage.setScene(createSceneHighScores());
         });
 
-        // Allignement et marges
+        // Allignements et marges
         vertPane.setAlignment(Pos.CENTER);
         vertPane.setSpacing(10);
         VBox.setMargin(logo, new Insets(40, 0, 0, 100));
