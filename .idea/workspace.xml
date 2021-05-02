@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bb50900-209c-4cd5-98c7-d5ba621b8ca4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Audio/video-1589849423.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/fish/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/fish/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/fish/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/fish/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/fish/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Entities/Fishes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FishHunt/Entities/Fishes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Entities/NormalFish.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FishHunt/Entities/NormalFish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/FishHunt$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FishHunt/FishHunt$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/FishHunt$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FishHunt/FishHunt$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/FishHunt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FishHunt/FishHunt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FishHunt/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/cible.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FishHunt/Images/cible.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/crabe.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FishHunt/Images/crabe.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/fish/00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/fish/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/fish/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/fish/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/fish/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/fish/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/fish/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/fish/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FishHunt/Images/star.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FishHunt/Images/star.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Fishes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Fishes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/NormalFish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/NormalFish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FishHunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FishHunt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/cible.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/cible.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/crabe.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/crabe.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/fish/00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/fish/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/fish/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/fish/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/fish/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/fish/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/fish/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/fish/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/star.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/star.png" afterDir="false" />
-    </list>
+    <list default="true" id="6bb50900-209c-4cd5-98c7-d5ba621b8ca4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
