@@ -213,7 +213,7 @@ public class Game {
 
         // Enlève les poissons s'ils sortent de l'écran par la gauche de 150 px (enlève une vie en même temps)
         for (int i = 0; i < fishes.size(); i++) {
-            if (fishes.get(i).getX() < -150) {
+            if (fishes.get(i).getX() < -180) {
                 fishes.remove(i);
                 lives -= 1;
             }
@@ -221,7 +221,7 @@ public class Game {
 
         // Enlève les poissons s'ils sortent de l'écran par la droite de 50px (enlève une vie en même temps)
         for (int i = 0; i < fishes.size(); i++) {
-            if (fishes.get(i).getX() > WIDTH + 50) {
+            if (fishes.get(i).getX() > WIDTH + 150) {
                 fishes.remove(i);
                 lives -= 1;
             }
@@ -288,8 +288,10 @@ public class Game {
     public void draw(GraphicsContext context, double mouseX, double mouseY) {
 
         // Affiche le fond marin
-        context.setFill(Color.DARKBLUE);
-        context.fillRect(0, 0, WIDTH, HEIGHT);
+        // context.setFill(Color.DARKBLUE);
+        String bgString = "/Images/background/zinc" + (level % 3) + ".jpg";
+        Image img = new Image(bgString, 640, 480, false, false);
+        context.drawImage(img, 0, 0, WIDTH, HEIGHT);
 
         // Affiche les bulles
         for (Bubble b : bubbles) {

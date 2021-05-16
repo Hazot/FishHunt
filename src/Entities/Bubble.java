@@ -12,7 +12,8 @@ public class Bubble extends Entities{
     public Bubble(double x) {
         this.x = x;
         this.y = 500 + 10*Math.random();
-        this.color = Color.rgb(0, 0, 255, 0.4);
+        // this.color = Color.rgb(0, 0, 255, 0.4);
+        this.color = Color.rgb(176, 206, 255, 0.4);
         this.vy = -350 - 100*Math.random();
 
         // Rayon entre 5 et 20 pixels

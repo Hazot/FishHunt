@@ -17,6 +17,7 @@ import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.*;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -262,6 +263,7 @@ public class FishHunt extends Application {
         root.getChildren().add(canvas);
 
         GraphicsContext context = canvas.getGraphicsContext2D();
+
 
         // Mouvement de la souris pour animer le crosshair
         canvas.setOnMouseMoved((e) -> {
