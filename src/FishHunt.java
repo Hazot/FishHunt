@@ -17,12 +17,15 @@ import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.*;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
+import java.io.File;
 import java.util.ArrayList;
 
 public class FishHunt extends Application {
@@ -73,6 +76,15 @@ public class FishHunt extends Application {
         primaryStage.getIcons().add(new Image("/Images/logo.png"));
         primaryStage.setResizable(false);
         primaryStage.sizeToScene();
+
+        // Musique
+//        String musicFile = "C://Users/HazoT/Documents/github/FishHunt/src/Audio/Audio/The Dark World - The Legend of Zelda A Link to the Past.mp3";     // For example
+//        Media theme1 = new Media(getClass().getResource("/audio/The Dark World - The Legend of Zelda A Link to the Past.mp3").toExternalForm());
+//
+//        Media theme = new Media(new File(String.valueOf(theme1)).toURI().toString());
+//        MediaPlayer mediaPlayer = new MediaPlayer(theme);
+//        mediaPlayer.setAutoPlay(true);
+
 
         this.primaryStage.show();
     }
