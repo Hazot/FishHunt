@@ -1,5 +1,10 @@
-
-// Kevin Lessard
+//*******************************************************************
+// author = "Kevin Lessard"
+// version = "1.0"
+//
+// Java program for a small window size game to understand practice proper OOP, basic game physics, memory management
+// and MVC (Model-View-Controller)
+//*******************************************************************
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
