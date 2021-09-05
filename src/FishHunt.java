@@ -45,6 +45,7 @@ public class FishHunt extends Application {
     private ListView<String> list = new ListView<>();
     private ArrayList<String> scores = new ArrayList<>();
     private int finalScore;
+    private double finalAccuracy;
 
     /**
      * fonction main
@@ -119,7 +120,7 @@ public class FishHunt extends Application {
             primaryStage.setScene(createSceneHighScores());
         });
 
-        // Allignements et marges
+        // Allignement et marges
         vertPane.setAlignment(Pos.CENTER);
         vertPane.setSpacing(10);
         VBox.setMargin(logo, new Insets(40, 0, 0, 100));
@@ -230,7 +231,7 @@ public class FishHunt extends Application {
             String writtenName = name.getText();
 
             // Ajoute le nouveau highScore au tableau avec le nom déterminer juste au-dessus
-            controller.addHighScore(scores, controller.newHighScore(scores, finalScore), writtenName, finalScore);
+            controller.addHighScore(scores, controller.newHighScore(scores, finalScore, finalAccuracy), writtenName, finalScore, finalAccuracy);
 
             // Retourne au menu après avoir ajouter le nouveau HighScore
             primaryStage.setScene(createSceneMenu());
@@ -334,8 +335,9 @@ public class FishHunt extends Application {
                 if (controller.changeScene()) {
                     // On sauvegarde le score final du jeu
                     finalScore = controller.getFinalScore();
+                    finalAccuracy = controller.getFinalAccuracy();
                     // S'il n'y a pas de nouveau highScore à rajouter, on montre les highScores seulement
-                    if (controller.newHighScore(scores, finalScore) != -1) {
+                    if (controller.newHighScore(scores, finalScore, finalAccuracy) != -1) {
                         primaryStage.setScene(createSceneNewHighScore());
                     } else {
                         primaryStage.setScene(createSceneHighScores());

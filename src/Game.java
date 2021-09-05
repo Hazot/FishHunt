@@ -7,6 +7,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import java.io.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -50,6 +51,11 @@ public class Game {
     // Miscellaneous game things
     private boolean debuglevelUp = false;
     private boolean switchScene = false;
+    private int nbFishCatched;
+    private int nbBulletShot;
+    private double accuracy = 0;
+    private double finalAccuracy;
+    private DecimalFormat accuracyFormat = new DecimalFormat( "#.##" );
 
     /**
      * Initiatlise les listes, les variables et les images pour une partie
@@ -167,7 +173,8 @@ public class Game {
                     if (!f.isAlive()) {
                         fishes.remove(f);
                         score += 1;
-                        scoreCounterTo5 +=1;
+                        scoreCounterTo5 += 1;
+                        nbFishCatched += 1;
                         break;
                     }
                 }
@@ -304,6 +311,9 @@ public class Game {
         context.setTextAlign(TextAlignment.CENTER);
         context.setTextBaseline(VPos.CENTER);
         context.fillText(String.valueOf(score), Math.round(WIDTH)/2, 40);
+        context.setFont(Font.font("Verdana", 25));
+        updateAccuracy();
+        context.fillText("Précision: " + accuracy + " %", Math.round(WIDTH)/2, 460);
 
         // Affiche Level up + le level de départ
         showLevelUp(context);
@@ -323,6 +333,7 @@ public class Game {
                 timerGameOverActive = true;
                 tempTimerGameOver = timeAlive;
                 finalScore = score;
+                finalAccuracy = accuracy;
             }
             // On affiche game over pendant les 3 prochaines secondes, ensuite on change la scène
             if (tempTimerGameOver + 3 >= timeAlive) {
@@ -340,6 +351,15 @@ public class Game {
     }
 
     /**
+     * Update la précision de l'utilisateur ("accuracy")
+     */
+    public void updateAccuracy() {
+        if (nbBulletShot != 0 && bullets.size() == 0) {
+            accuracy = Double.parseDouble(accuracyFormat.format(((double) nbFishCatched / nbBulletShot) * 100));
+        }
+    }
+
+    /**
      * Tirer une seule balle par appel de fonction en cliquant avec la souris
      * @param mouseX Position de la souris en x
      * @param mouseY Position de la souris en y
@@ -347,6 +367,7 @@ public class Game {
     public void shoot(double mouseX, double mouseY) {
         Bullet b = new Bullet(mouseX, mouseY);
         bullets.add(b);
+        nbBulletShot += 1;
     }
 
     /*
@@ -384,25 +405,46 @@ public class Game {
      *
      * @param scores ArrayList des HighScores jusqu'à date
      * @param finalScore Score final sauvegardé au moment où le game over apparait
+     * @param finalAccuracy Précision finale sauvegardé au moment où le game over apparait
      * @return L'index où insérer le nouveau highScore et si le score n'est pas un nouveau highScore, retourne -1.
      */
-    public int newHighScore(ArrayList<String> scores, int finalScore) {
+    public int newHighScore(ArrayList<String> scores, int finalScore, double finalAccuracy) {
+
         if (scores.size() == 0) {
             return 0;
+
         } else if (scores.size() == 10) {
+
             for (int i = 0; i < scores.size(); i++) {
+
                 String line = scores.get(i);
-                int highScore = Integer.parseInt(line.substring(line.lastIndexOf(" ") + 1));
+                // Le substring suivant permet d'enlever la dernière position du score dans le fichier et l'arrayList
+                String[] stringArray = line.split(" ");
+
+                int highScore = Integer.parseInt(stringArray[stringArray.length - 3]);
+                double accuracyScore = Double.parseDouble(stringArray[stringArray.length - 1]);
+
                 if (finalScore > highScore) {
+                    return i;
+                } else if (finalScore == highScore && finalAccuracy > accuracyScore) {
                     return i;
                 }
             }
             return -1;
+
         } else {
+
             for (int i = 0; i < scores.size(); i++) {
+
                 String line = scores.get(i);
-                int highScore = Integer.parseInt(line.substring(line.lastIndexOf(" ") + 1));
+                String[] stringArray = line.split(" ");
+
+                int highScore = Integer.parseInt(stringArray[stringArray.length - 3]);
+                double accuracyScore = Double.parseDouble(stringArray[stringArray.length - 1]);
+
                 if (finalScore > highScore) {
+                    return i;
+                } else if (finalScore == highScore && finalAccuracy > accuracyScore) {
                     return i;
                 }
             }
@@ -417,13 +459,14 @@ public class Game {
      * @param scores ArrayList des HighScores jusqu'à date
      * @param index index calculé avec la méthode newHighScore
      * @param writtenName Nom choisi par l'utilisateur avant d'appuyer sur le bouton ajouter
-     * @param finalScore Score final sauvegardé au moment où le game over apparait
+     * @param score Score final sauvegardé au moment où le game over apparait
+     * @param accuracy Précision finale sauvegardé au moment où le game over apparait
      */
-    public void addHighScore(ArrayList<String> scores, int index, String writtenName, int finalScore) {
+    public void addHighScore(ArrayList<String> scores, int index, String writtenName, int score, double accuracy) {
 
         // La position dans le scoreboard est 1 de plus que l'index dans le tableau
         int positionNewScore = index + 1;
-        scores.add(index, "#" + positionNewScore + " - " + writtenName + " - " + finalScore);
+        scores.add(index, "#" + positionNewScore + " - " + writtenName + " - " + score + " - " + accuracy);
 
         try {
             FileWriter scoreWriter = new FileWriter("HighScores.txt");
@@ -485,4 +528,7 @@ public class Game {
         return finalScore;
     }
 
+    public double getFinalAccuracy() {
+        return finalAccuracy;
+    }
 }
