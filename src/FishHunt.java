@@ -1,5 +1,5 @@
 
-// Alexis Chevrier et Kevin Lessard
+// Kevin Lessard
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
