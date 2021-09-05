@@ -1,5 +1,5 @@
 //*******************************************************************
-// author = "Kevin Lessard
+// author = "Kevin Lessard"
 // version = "1.0"
 //
 // Java program for a small window size game to understand practice proper OOP, basic game physics, memory management
