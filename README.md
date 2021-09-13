@@ -1,7 +1,6 @@
 # FishHunt
 
-This is the original game.
-A camera locked shooter game made with JavaFX for a school project.
+A camera locked shooter game made with JavaFX from scratch for school.
 
 I could maybe add some music.
 ## Table of content
@@ -53,3 +52,15 @@ I could maybe add some music.
 
 
 ## Screenshots
+
+### Game menu
+![Game menu](menu.png)
+
+### Gameplay
+![Gameplay](gameplay.png)
+
+### Best scores
+![Best scores](addscore.png)
+
+## Special Thanks
+- Alexis

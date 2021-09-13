@@ -15,7 +15,7 @@ public class NormalFish extends Fishes{
         // Détermination de l'image du poisson aléatoirement
         String fishKind = "/Images/fish/0" + (int) (Math.random() * 8) + ".png";
         entityImage = new Image(fishKind, largeur, hauteur, false, false);
-        //entityImage = ImageHelpers.colorize(entityImage, Color.rgb((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256), 1));
+        entityImage = ImageHelpers.colorize(entityImage, Color.rgb((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256), 1));
 
         // EN Y - Vitesse aléatoire initiale et gravité (accélération)
         y = Math.random()*3*HEIGHT/5 + (double) HEIGHT/5 - largeur/2;
