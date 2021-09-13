@@ -41,7 +41,7 @@ public class FishHunt extends Application {
     private Controller controller;
 
     // variables du tableau de scores
-    private Text title = new Text("Meilleurs scores");
+    private Text title = new Text("Best scores");
     private ListView<String> list = new ListView<>();
     private ArrayList<String> scores = new ArrayList<>();
     private int finalScore;
@@ -105,8 +105,8 @@ public class FishHunt extends Application {
         Background fondBleu = new Background(fillFondBleu);
 
         // Boutons
-        Button bGame = new Button("Nouvelle partie!");
-        Button bScores = new Button("Meilleurs scores");
+        Button bGame = new Button("New game!");
+        Button bScores = new Button("Best scores");
         bGame.setFont(Font.font("Verdana", 14));
         bScores.setFont(Font.font("Verdana", 14));
 
@@ -209,9 +209,9 @@ public class FishHunt extends Application {
 
         // Éléments à afficher
         TextField name = new TextField();
-        Text votreNom = new Text("Votre nom :");
+        Text votreNom = new Text("Your name :");
         finalScore = controller.getFinalScore();
-        Text vosPoints = new Text("a fait " + finalScore + " points!");
+        Text vosPoints = new Text("has done " + finalScore + " points!");
         title.setFont(Font.font("Verdana", 30));
 
         // Affichage de la liste
@@ -225,7 +225,7 @@ public class FishHunt extends Application {
         bMenu.setOnAction((e) -> primaryStage.setScene(createSceneMenu()));
 
         // Bouton pour ajouter le nouveau HighScore
-        Button bAdd = new Button("Ajouter!");
+        Button bAdd = new Button("Add!");
         bAdd.setOnAction((e) -> {
 
             String writtenName = name.getText();

@@ -313,7 +313,7 @@ public class Game {
         context.fillText(String.valueOf(score), Math.round(WIDTH)/2, 40);
         context.setFont(Font.font("Verdana", 25));
         updateAccuracy();
-        context.fillText("Précision: " + accuracy + " %", Math.round(WIDTH)/2, 460);
+        context.fillText("Accuracy: " + accuracy + " %", Math.round(WIDTH)/2, 460);
 
         // Affiche Level up + le level de départ
         showLevelUp(context);
