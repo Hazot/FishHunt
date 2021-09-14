@@ -9,6 +9,7 @@ I could maybe add some music.
 - [Getting started](#getting-started)
 - [Game rules](#game-rules)
 - [Screenshots](#screenshots)
+- [Special thanks](#special-thanks)
 
 ## Requirements
 
