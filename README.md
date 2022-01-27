@@ -13,7 +13,7 @@ I could maybe add some music.
 
 ## Requirements
 
-- Java JDK 11 or later (latest recommended)
+- Java JDK 16 or later (latest recommended)
 - JavaFX 11 or later
 
 ## Getting started
