@@ -39,6 +39,8 @@ I could maybe add some music.
 
    ####Other route
    If you want to run the code using command line and you need help, you can visit: https://openjfx.io/openjfx-docs/#install-javafx.
+   
+   I will probably setup a .jar and a build.xml in the future.
 
 ## Game rules
 
