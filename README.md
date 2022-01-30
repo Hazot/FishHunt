@@ -63,6 +63,8 @@ I could maybe add some music.
 ![Gameplay](gameplay.png)
 
 ### Best scores
+
+Name - Score - Accuracy
 ![Best scores](addscore.png)
 
 ## Special Thanks
