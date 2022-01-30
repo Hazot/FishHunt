@@ -65,6 +65,7 @@ I could maybe add some music.
 ### Best scores
 
 Name - Score - Accuracy
+
 ![Best scores](addscore.png)
 
 ## Special Thanks
